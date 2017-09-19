@@ -37,6 +37,10 @@
       <li><a href="#supplierprofile" class="cc-active">Supplier Profile</a></li>
       <li><a href="#evaluating" class="cc-active">Evaluating Suppliers</a></li>
       <li class="separator"></li>
+      <li><strong>Requesting Rates</strong></li>
+      <li><a href="#sendrequest" class="cc-active">Sending Request</a></li>
+      <li><a href="#respondrequest" class="cc-active">Responding to Rates</a></li>
+      <li><a href="#respondquery" class="cc-active">Responding to Queries</a></li>
       <!--
       <li><a href="#view_type" class="cc-active">View Type</a></li>
       <li><a href="#animation_style" class="cc-active">Animation Styles</a></li>
@@ -165,7 +169,7 @@
         The main parameter we are interested is the Rate parameter. This parameter allows us to filter the list of suppliers returned
         based on the current available rates which they have available for their products.
       </p>
-      <div style="border-style:solid;border-width:0.5px;padding-left:10px;padding-right:10px;padding-top:10px;">
+      <div style="display:block;width:40%;border-style:solid;border-width:0.5px;padding-left:10px;padding-right:10px;padding-top:10px;">
         <img src="./img/rezdy_rate_dropdown.PNG"/>
       </div>
       <p>
@@ -205,10 +209,36 @@
       <p>
         If we move to the rates section of the supplier profile by selecting the rates tab near the top of the profile we can view a list of the rates
         offered by the supplier. since we searched based on the supplier not having any rates accessible to us we should find a page listing the suppliers
-        products with blank spaces in the marketplace rate / negotiated rate column
+        products with blank spaces in the negotiated rate column. 
       </p>
-      <div style="border-style:solid;border-width:0.5px;padding-left:10px;padding-right:10px;padding-top:10px;">
-        <img src="./img/rezdy_supplier_profile_rates.PNG"/>
+      <p>
+        Some suppliers offer marketplace rates which NoExpiry currently honors. If there is any rates information under the marketplace rates column
+        on this page then that supplier should be skipped as we already have a rate for them.
+      </p>
+      <div style="width:100%;height:100%;display:flex;flex-direction:row;align-items:flex-start;">
+        <div style="margin-top:0px;margin-right:1%;width:34.5%;text-align:start;">
+          <p style="margin:0px;">
+            <b>Supplier with no rates</b><br/>
+          </p>
+        </div>
+        <div style="width:64.5%;">
+          <div style="width:95%;border-style:solid;border-width:0.5px;padding-left:10px;padding-right:10px;padding-top:10px;">
+            <img src="./img/rezdy_supplier_profile_rates.PNG"/>
+          </div>
+        </div>
+      </div>
+      <br/>
+      <div style="width:100%;height:100%;display:flex;flex-direction:row;align-items:flex-start;">
+        <div style="margin-top:0px;margin-right:1%;width:34.5%;text-align:start;">
+          <p style="margin:0px;">
+            <b>Supplier with marketplace rates</b><br/>
+          </p>
+        </div>
+        <div style="width:64.5%;">
+          <div style="width:95%;border-style:solid;border-width:0.5px;padding-left:10px;padding-right:10px;padding-top:10px;">
+            <img src="./img/rezdy_product_with_market_rates.PNG"/>
+          </div>
+        </div>
       </div>
       <p>
         From this page we can request this suppliers negotiated rates, but first we need to make sure that this supplier is suitable to join the NoExpiry platform.
@@ -239,7 +269,7 @@
         </div>
         <div style="width:54.5%;">
           <div style="width:95%;float:left;border-style:solid;border-width:0.5px;padding-left:10px;padding-right:10px;padding-top:10px;">
-            <img src="./img/rezdy_product_good.PNG"/>
+            <img src="./img/rezdy_product_good_small.PNG"/>
           </div>
         </div>
       </div>
@@ -255,7 +285,7 @@
         </div>
         <div style="width:54.5%;">
           <div style="width:95%;border-style:solid;border-width:0.5px;padding-left:10px;padding-right:10px;padding-top:10px;">
-            <img src="./img/rezdy_product_bad_images_bad_description.PNG"/>
+            <img src="./img/rezdy_product_bad_image_description.PNG"/>
           </div>
           <br/>
           <div style="width:95%;border-style:solid;border-width:0.5px;padding-left:10px;padding-right:10px;padding-top:10px;">
@@ -264,6 +294,36 @@
         </div>
       </div>
       <hr>
+      <h2>Requesting Suppliers Negotiated Rates</h2>
+      <hr>
+      <h3 id="sendrequest">Requesting Negotiated Rates</h3>
+      <p>
+        Once we have determined a supplier suitable for the NoExpiry platform we want to request their negotiated rates.
+      </p>
+      <p>
+        The commission which NoExpiry works with is a flat 15% rate and we request this or higher from all suppliers on
+        all products they supply. This rate will be stated in our agent profile and suppliers should be directed to read
+        the agent profile when viewing our request for negotiated rates.
+      </p>
+      <p>
+        To Request the negotiated rates for a supplier we must go to the suppliers profile. This can be accessed be either
+        going back in the browser or clicking on the suppliers name in the bottom left hand corner of one of their products.
+      </p>
+      <p>
+        On the supplier profile we need to select the rates tab just under the suppliers name
+      </p>
+      <div style="display:block;width:40%;border-style:solid;border-width:0.5px;padding-left:10px;padding-right:10px;padding-top:10px;">
+        <img src="./img/rezdy_request4.png"/>
+      </div>
+      <br/>
+      <div style="width:100%;height:100%;display:flex;flex-direction:row;align-items:flex-start;">
+        <div style="width:95%;border-style:solid;border-width:0.5px;padding-left:10px;padding-right:10px;padding-top:10px;margin-right:1%;">
+          <img src="./img/rezdy_request_rates.png"/>
+        </div>
+        <div style="width:95%;border-style:solid;border-width:0.5px;padding-left:10px;padding-right:10px;padding-top:10px;">
+          <img src="./img/rezdy_request2.png"/>
+        </div>
+      </div>
       <!-- 
       <h2> Customizing Opineo</h2>
       <p> Before you make any cusomization or even start using Opineo create a 'div' element

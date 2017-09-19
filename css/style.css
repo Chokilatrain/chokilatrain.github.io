@@ -70,10 +70,14 @@ header {
 }
 
 .container {
-    width: 95%;
-    max-width: 650px;
+    width: calc(100% - 40px);
     position: relative;
 }
+
+@media(max-width: 950px){
+        .container {width: 100%;}
+}
+    
 
 strong, dt, h3, h4 {
     font-weight: 700;
@@ -449,6 +453,8 @@ input:focus {
 
     .docs-content {
         padding-left: 310px;
+        width:100%;
+        box-sizing: border-box;
     }
 
 
@@ -458,7 +464,7 @@ input:focus {
     }
 
     .container {
-        max-width: 1000px;
+       
         padding: 0 20px;
     }
 
